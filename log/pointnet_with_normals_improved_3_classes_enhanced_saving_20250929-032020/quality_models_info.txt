@@ -1,0 +1,12 @@
+epoch: 362, overall_acc: 0.746711, class_accs: [0.666667, 0.705357, 0.888889], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_362_acc_0.747_c0.670.710.89.ckpt
+epoch: 367, overall_acc: 0.690789, class_accs: [0.656863, 0.669643, 0.755556], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_367_acc_0.691_c0.660.670.76.ckpt
+epoch: 376, overall_acc: 0.736842, class_accs: [0.666667, 0.758929, 0.788889], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_376_acc_0.737_c0.670.760.79.ckpt
+epoch: 378, overall_acc: 0.782895, class_accs: [0.696078, 0.696429, 0.988889], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_378_acc_0.783_c0.700.700.99.ckpt
+epoch: 386, overall_acc: 0.759868, class_accs: [0.686275, 0.678571, 0.944444], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_386_acc_0.760_c0.690.680.94.ckpt
+epoch: 402, overall_acc: 0.753289, class_accs: [0.666667, 0.723214, 0.888889], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_402_acc_0.753_c0.670.720.89.ckpt
+epoch: 408, overall_acc: 0.697368, class_accs: [0.656863, 0.651786, 0.800000], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_408_acc_0.697_c0.660.650.80.ckpt
+epoch: 417, overall_acc: 0.717105, class_accs: [0.676471, 0.687500, 0.800000], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_417_acc_0.717_c0.680.690.80.ckpt
+epoch: 425, overall_acc: 0.740132, class_accs: [0.676471, 0.705357, 0.855556], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_425_acc_0.740_c0.680.710.86.ckpt
+epoch: 427, overall_acc: 0.763158, class_accs: [0.676471, 0.705357, 0.933333], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_427_acc_0.763_c0.680.710.93.ckpt
+epoch: 429, overall_acc: 0.796053, class_accs: [0.656863, 0.785714, 0.966667], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_429_acc_0.796_c0.660.790.97.ckpt
+epoch: 448, overall_acc: 0.743421, class_accs: [0.666667, 0.678571, 0.911111], path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\quality_epoch_448_acc_0.743_c0.670.680.91.ckpt

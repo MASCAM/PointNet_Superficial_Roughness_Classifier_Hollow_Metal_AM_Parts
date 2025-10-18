@@ -1,0 +1,52 @@
+=== VALIDATION SEGMENT CLASSIFICATION SUMMARY ===
+Generated on: 2025-10-18 02:26:35
+Classification based on: Fiedler Number (surface connectivity)
+Quality Classes: 0=Excellent, 1=Good, 2=Poor
+
+Total segments analyzed: 96
+
+Model: Real_Hollow_Cylinder_30mm_2025_02_13_v2
+  Total segments: 24
+  Class 0: 3 segments (12.5%)
+  Class 1: 19 segments (79.2%)
+  Class 2: 2 segments (8.3%)
+  Fiedler number range: -0.001724 - 0.012502
+  Fiedler number mean: 0.002386
+
+Model: Real_Hollow_Cylinder_30mm_2025_02_20_v2
+  Total segments: 24
+  Class 0: 3 segments (12.5%)
+  Class 1: 14 segments (58.3%)
+  Class 2: 7 segments (29.2%)
+  Fiedler number range: -0.000545 - 0.038444
+  Fiedler number mean: 0.007046
+
+Model: Real_Hollow_Cylinder_30mm_2025_02_22_v2
+  Total segments: 24
+  Class 0: 6 segments (25.0%)
+  Class 1: 18 segments (75.0%)
+  Class 2: 0 segments (0.0%)
+  Fiedler number range: -0.003320 - 0.005031
+  Fiedler number mean: 0.001359
+
+Model: Real_Hollow_Cylinder_30mm_2025_02_26_v2
+  Total segments: 24
+  Class 0: 4 segments (16.7%)
+  Class 1: 20 segments (83.3%)
+  Class 2: 0 segments (0.0%)
+  Fiedler number range: -0.004859 - 0.004609
+  Fiedler number mean: 0.000752
+
+=== OVERALL STATISTICS ===
+Class 0: 16 segments (16.7%)
+Class 1: 71 segments (74.0%)
+Class 2: 9 segments (9.4%)
+
+Fiedler Number Distribution:
+  Min: -0.004859
+  Max: 0.038444
+  Mean: 0.002886
+  Std: 0.006102
+  25%: 0.000175
+  50%: 0.001417
+  75%: 0.002926

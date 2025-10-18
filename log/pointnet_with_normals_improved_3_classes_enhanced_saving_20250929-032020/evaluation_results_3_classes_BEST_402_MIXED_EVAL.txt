@@ -1,0 +1,23 @@
+Evaluation Results (3 Classes):
+Overall Accuracy: 0.7500
+
+Per-class Accuracies:
+Class 0: 1.0000 (2/2)
+Class 1: 0.7500 (6/8)
+Class 2: 0.5000 (1/2)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.50      1.00      0.67         2
+     Class 1       0.86      0.75      0.80         8
+     Class 2       1.00      0.50      0.67         2
+
+    accuracy                           0.75        12
+   macro avg       0.79      0.75      0.71        12
+weighted avg       0.82      0.75      0.76        12
+
+Confusion Matrix:
+[[2 0 0]
+ [2 6 0]
+ [0 1 1]]

@@ -1,0 +1,6 @@
+epoch: 429
+eval_accuracy: 0.796053
+class_accuracies: [0.6568627450980392, 0.7857142857142857, 0.9666666666666667]
+latest_best_path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\best_model.ckpt
+unique_best_path: log\pointnet_with_normals_improved_3_classes_enhanced_saving_20250929-032020\best_model_epoch_429_acc_0.7961.ckpt
+saved_at: 2025-09-29 04:31:02
