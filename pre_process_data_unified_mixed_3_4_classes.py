@@ -2,7 +2,6 @@ import os
 import numpy as np
 import h5py
 import glob
-import re
 import pandas as pd
 import open3d as o3d
 import random

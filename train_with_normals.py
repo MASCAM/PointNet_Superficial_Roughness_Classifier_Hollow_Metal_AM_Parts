@@ -1,7 +1,6 @@
 import argparse
 import numpy as np
 import tensorflow as tf
-import socket
 import importlib
 import os
 import sys

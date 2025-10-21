@@ -2,7 +2,6 @@ import os
 import numpy as np
 import pandas as pd
 import open3d as o3d
-import math
 
 FILENAME = 'Real_Hollow_Cylinder_30mm_2025_02_20_v2'
 #FILENAME = 'Basic_Hollow_Cube_main'

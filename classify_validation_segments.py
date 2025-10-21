@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-Validation Segment Classifier
-Uses K-means and KNN to classify validation segments based on roughness features
-Classifies segments into 3 or 4 quality classes (0-2 or 0-3) based on surface roughness characteristics
-"""
 
 import os
 import numpy as np
@@ -252,55 +247,9 @@ def classify_segments(features, file_paths, output_dir):
     scaler = StandardScaler()
     features_scaled = scaler.fit_transform(features)
     
-    # For 3-class classification, use reference-based clustering to maintain consistency
-    if NUM_CLASSES == 3:
-        # Load reference 4-class results to maintain consistency
-        reference_path = "Segmented_data/Validation/Original/Input_4_classes_fiedler/classification_results.csv"
-        if os.path.exists(reference_path):
-            print("Using 4-class results as reference for consistent 3-class mapping...")
-            ref_df = pd.read_csv(reference_path)
-            
-            # Create mapping from 4-class to 3-class based on Fiedler number ranges
-            # Map 4-class results to 3-class: 0→0, 1→0, 2→1, 3→2
-            ref_fiedler_by_class = {}
-            for class_id in range(4):
-                class_data = ref_df[ref_df['quality_class'] == class_id]['fiedler_number']
-                ref_fiedler_by_class[class_id] = {
-                    'min': class_data.min(),
-                    'max': class_data.max(),
-                    'mean': class_data.mean()
-                }
-            
-            # Define 3-class boundaries based on 4-class reference
-            # Class 0: combine 4-class 0 and 1 (lowest Fiedler)
-            # Class 1: 4-class 2 (middle Fiedler)  
-            # Class 2: 4-class 3 (highest Fiedler)
-            boundary_01 = (ref_fiedler_by_class[0]['max'] + ref_fiedler_by_class[1]['max']) / 2
-            boundary_12 = (ref_fiedler_by_class[2]['max'] + ref_fiedler_by_class[3]['min']) / 2
-            
-            print(f"3-class boundaries based on 4-class reference:")
-            print(f"  Class 0: Fiedler < {boundary_01:.6f}")
-            print(f"  Class 1: {boundary_01:.6f} ≤ Fiedler < {boundary_12:.6f}")
-            print(f"  Class 2: Fiedler ≥ {boundary_12:.6f}")
-            
-            # Assign classes based on Fiedler number boundaries
-            cluster_labels = np.zeros(len(features), dtype=int)
-            for i, fiedler in enumerate(features[:, 0]):
-                if fiedler < boundary_01:
-                    cluster_labels[i] = 0
-                elif fiedler < boundary_12:
-                    cluster_labels[i] = 1
-                else:
-                    cluster_labels[i] = 2
-        else:
-            print("Reference 4-class results not found, using standard K-means...")
-            # Fallback to standard K-means
-            kmeans = KMeans(n_clusters=NUM_CLASSES, random_state=42, n_init=10, init='k-means++')
-            cluster_labels = kmeans.fit_predict(features_scaled)
-    else:
-        # For other class counts, use standard K-means
-        kmeans = KMeans(n_clusters=NUM_CLASSES, random_state=42, n_init=10, init='k-means++')
-        cluster_labels = kmeans.fit_predict(features_scaled)
+
+    kmeans = KMeans(n_clusters=NUM_CLASSES, random_state=42, n_init=10, init='k-means++')
+    cluster_labels = kmeans.fit_predict(features_scaled)
     
     # Analyze cluster characteristics
     print("\nCluster Analysis:")
@@ -511,7 +460,7 @@ def analyze_model_classification(results_df, output_dir):
     
     # Create quality class descriptions based on NUM_CLASSES
     if NUM_CLASSES == 3:
-        quality_desc = "Quality Classes: 0=Excellent, 1=Good, 2=Poor"
+        quality_desc = "Quality Classes: 0=Good, 1=Fair, 2=Poor"
     elif NUM_CLASSES == 4:
         quality_desc = "Quality Classes: 0=Excellent, 1=Good, 2=Fair, 3=Poor"
     else:

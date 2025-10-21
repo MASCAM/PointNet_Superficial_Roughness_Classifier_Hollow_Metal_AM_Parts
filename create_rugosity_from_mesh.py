@@ -1,25 +1,7 @@
-import logging
-import json
 import numpy as np
-from datetime import datetime
-import ast
-import math
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-from matplotlib import cm
-import matplotlib.patches as mpatches
-import matplotlib.lines as mlines
-import pickle
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
-from google.cloud.firestore_v1.field_path import FieldPath
-from datetime import datetime
 import pandas as pd
 import numpy as np
 import open3d as o3d
-#import pyvista as pv
-from numpy import genfromtxt
 
 import random
 
